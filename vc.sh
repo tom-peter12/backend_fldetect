@@ -3,6 +3,6 @@
 
 git add .
 git commit -m "AT $(date +%Y-%m-%d-%H-%M-%S) BY $(whoami)"
-git push 
+git push heroku master
 
 # End of file
