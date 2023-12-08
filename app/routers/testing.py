@@ -2,9 +2,7 @@ import numpy as np
 import json
 
 import tensorflow as tf
-from torch import nn, optim
-import torch
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 
 from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
