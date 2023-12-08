@@ -6,7 +6,7 @@ from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 
-from app.routers.testing import evaluate_model
+# from app.routers.testing import evaluate_model
 from .. import models, schemas, utils
 from ..database import SessionLocal, get_db
 from fastapi.responses import JSONResponse
