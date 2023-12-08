@@ -11,7 +11,6 @@ from .. import models, schemas, utils
 from ..database import SessionLocal, get_db
 from fastapi.responses import JSONResponse
 from uuid import uuid4
-import torch
 
 THRESHOLD = 4
 
