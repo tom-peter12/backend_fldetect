@@ -1,1 +1,1 @@
-web:uvicorn -k uvicorn.workers.UvicornWorker --log-level debug app.main:app
+web: uvicorn app.main:app --host=0.0.0.0 --port=${PORT:-500}
