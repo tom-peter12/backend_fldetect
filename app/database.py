@@ -6,7 +6,7 @@ from psycopg2.extras import RealDictCursor
 import time
 
 
-SQLALCHEMY_DATABASE_URL = "postgresql://rutfjftynzisze:ee18d1ac530ddd10241af9264c81be1306a83175cb760431a973faedc3e80a1a@ec2-3-210-173-88.compute-1.amazonaws.com:5432/d2p75n9db98v6"
+SQLALCHEMY_DATABASE_URL = "postgresql://lyujcpfjqbvnex:381d732db3e80acfda4c9b081a8f9f2390474ec799b90b0ddac7e1eda24a645f@ec2-54-163-217-185.compute-1.amazonaws.com:5432/d3tgbj32opm6ne"
 
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
@@ -27,8 +27,8 @@ def get_db():
 while True:
 
     try:
-        conn = psycopg2.connect(host='ec2-3-210-173-88.compute-1.amazonaws.com', database='d2p75n9db98v6', user='rutfjftynzisze',
-                                password='ee18d1ac530ddd10241af9264c81be1306a83175cb760431a973faedc3e80a1a', cursor_factory=RealDictCursor)
+        conn = psycopg2.connect(host='ec2-54-163-217-185.compute-1.amazonaws.com', database='d3tgbj32opm6ne', user='lyujcpfjqbvnex',
+                                password='381d732db3e80acfda4c9b081a8f9f2390474ec799b90b0ddac7e1eda24a645f', cursor_factory=RealDictCursor)
         cursor = conn.cursor()
         print("Database connection was succesfull!")
         break
@@ -42,8 +42,8 @@ def check_database_connection() -> bool:
     retries = 5
     while retries > 0:
         try:
-            conn = psycopg2.connect(host='ec2-3-210-173-88.compute-1.amazonaws.com', database='d2p75n9db98v6', user='rutfjftynzisze',
-                password='ee18d1ac530ddd10241af9264c81be1306a83175cb760431a973faedc3e80a1a', cursor_factory=RealDictCursor)
+            conn = psycopg2.connect(host='ec2-54-163-217-185.compute-1.amazonaws.com', database='d3tgbj32opm6ne', user='lyujcpfjqbvnex',
+                password='381d732db3e80acfda4c9b081a8f9f2390474ec799b90b0ddac7e1eda24a645f', cursor_factory=RealDictCursor)
             cursor = conn.cursor()
             cursor.execute("SELECT 1")
             conn.close()
